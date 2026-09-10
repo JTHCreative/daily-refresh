@@ -72,8 +72,8 @@ td.vcol { color:var(--ink); }
 .jitem { break-inside:avoid; padding:10px 0; border-top:1px solid var(--hair); }
 .jitem:first-child { border-top:none; }
 /* goals */
-.todo { display:flex; align-items:flex-start; gap:10px; padding:6px 0; font-size:14.5px; color:var(--ink); }
-.todo.sub { padding-left:30px; font-size:13.5px; color:var(--ink-soft); }
+.todo { display:flex; align-items:flex-start; gap:10px; padding:6px 0; font-size:14px; color:var(--ink); }
+.todo.sub { padding-left:30px; font-size:13px; color:var(--ink-soft); }
 .box { flex:none; width:15px; height:15px; margin-top:2px; border:1.6px solid var(--ink-grey); border-radius:4px; }
 .todo.sub .box { width:13px; height:13px; }
 .cad { color:var(--ink-grey); font-size:12px; margin-left:6px; }
@@ -87,7 +87,7 @@ td.vcol { color:var(--ink); }
   .jobs { column-count:1; }
 }
 </style>
-<button class="toggle" id="tg" aria-label="Toggle theme">◐ Theme</button>
+<button class="toggle" id="tg" aria-label="Toggle theme">◍ Theme</button>
 <div class="wrap">
   <div class="daydate">Thursday · September 10 2026</div>
   <h1>The day is wide open, Justin — the last clear one before Maui.</h1>
@@ -161,32 +161,32 @@ td.vcol { color:var(--ink); }
 
   <div class="band">
     <h2>Stock market analysis</h2>
-    <div class="subhead">Pre-market read, 6:15 AM PT — ahead of the 6:30 AM PT / 9:30 AM ET open.</div>
-    <div class="pmnote">Prices below are pre-market (extended-hours / ETF-proxy) marks compared to each name's official prior-session close (Sep 9). Pre-market prints are thin and can move by the bell.</div>
+    <div class="subhead">End-of-day recap, 1:05 PM PT — the regular session closed at 1:00 PM PT / 4:00 PM ET.</div>
+    <div class="pmnote">Prices below are the day's closing levels (ETF proxies for the indexes) versus each name's prior-session close (Sep 9). The regular session settled at the 1:00 PM PT / 4:00 PM ET close.</div>
     <table>
-      <thead><tr><th>Index (proxy)</th><th>Prior close</th><th>Pre-mkt</th><th>Change</th></tr></thead>
+      <thead><tr><th>Index (proxy)</th><th>Prior close</th><th>Close</th><th>Change</th></tr></thead>
       <tbody>
-        <tr><td class="sym">S&amp;P 500 (SPY)</td><td>762.40</td><td>758.26</td><td class="chg down">−0.54%</td></tr>
-        <tr><td class="sym">Nasdaq-100 (QQQ)</td><td>716.31</td><td>707.19</td><td class="chg down">−1.27%</td></tr>
-        <tr><td class="sym">Dow (DIA)</td><td>524.07</td><td>523.08</td><td class="chg down">−0.19%</td></tr>
-        <tr><td class="sym">Bitcoin (BTC)</td><td>78,400</td><td>76,791</td><td class="chg down">−2.05%</td></tr>
+        <tr><td class="sym">S&amp;P 500 (SPY)</td><td>762.40</td><td>757.87</td><td class="chg down">−0.59%</td></tr>
+        <tr><td class="sym">Nasdaq-100 (QQQ)</td><td>716.31</td><td>708.66</td><td class="chg down">−1.07%</td></tr>
+        <tr><td class="sym">Dow (DIA)</td><td>524.07</td><td>520.79</td><td class="chg down">−0.63%</td></tr>
+        <tr><td class="sym">Bitcoin (BTC)</td><td>78,395</td><td>77,155</td><td class="chg down">−1.58%</td></tr>
       </tbody>
     </table>
     <div class="tblcap">S&amp;P 500 / Nasdaq-100 / Dow shown via SPY, QQQ, DIA ETFs; Bitcoin is a 24-hour mark vs. the prior midnight close.</div>
-    <div class="acct">Your individual account is worth <b>$8,734.51</b> at the prior close — <b>$6,553.68</b> equities, <b>$528.44</b> crypto, <b>$1,652.39</b> cash (buying power $1,472.39). Pre-market, the equity book is tracking down roughly <b>1.5%</b>, led lower by HOOD and cushioned by a small AAPL gain.</div>
+    <div class="acct">Your individual account is worth <b>$8,800.08</b> at the close — <b>$6,616.43</b> equities, <b>$531.26</b> crypto, <b>$1,652.39</b> cash (buying power $1,472.39). On the day the equity book finished down about <b>0.6%</b> from the prior close, dragged by HOOD, ZG and EVGO and cushioned by a strong <b>+3.6%</b> gain in AAPL.</div>
     <table>
-      <thead><tr><th>Holding</th><th>Shares</th><th>Prior close</th><th>Pre-mkt</th><th>Change</th><th>Value</th></tr></thead>
+      <thead><tr><th>Holding</th><th>Shares</th><th>Prior close</th><th>Close</th><th>Change</th><th>Value</th></tr></thead>
       <tbody>
-        <tr><td class="sym">AAPL</td><td>4</td><td>$315.34</td><td>$317.48</td><td class="chg up">+0.68%</td><td class="vcol">$1,270</td></tr>
-        <tr><td class="sym">HOOD</td><td>35</td><td>$115.28</td><td>$112.65</td><td class="chg down">−2.28%</td><td class="vcol">$3,943</td></tr>
-        <tr><td class="sym">TTD</td><td>42</td><td>$13.88</td><td>$13.65</td><td class="chg down">−1.67%</td><td class="vcol">$573</td></tr>
-        <tr><td class="sym">ZG</td><td>12.84</td><td>$32.81</td><td>$32.81</td><td class="chg flat">0.00%</td><td class="vcol">$421</td></tr>
-        <tr><td class="sym">EVGO</td><td>225</td><td>$1.355</td><td>$1.33</td><td class="chg down">−1.85%</td><td class="vcol">$299</td></tr>
-        <tr><td class="sym">SPYD</td><td>1</td><td>$48.48</td><td>$48.56</td><td class="chg up">+0.17%</td><td class="vcol">$49</td></tr>
+        <tr><td class="sym">AAPL</td><td>4</td><td>$315.34</td><td>$326.60</td><td class="chg up">+3.57%</td><td class="vcol">$1,306</td></tr>
+        <tr><td class="sym">HOOD</td><td>35</td><td>$115.28</td><td>$113.34</td><td class="chg down">−1.68%</td><td class="vcol">$3,967</td></tr>
+        <tr><td class="sym">TTD</td><td>42</td><td>$13.88</td><td>$13.96</td><td class="chg up">+0.58%</td><td class="vcol">$586</td></tr>
+        <tr><td class="sym">ZG</td><td>12.84</td><td>$32.81</td><td>$31.90</td><td class="chg down">−2.76%</td><td class="vcol">$410</td></tr>
+        <tr><td class="sym">EVGO</td><td>225</td><td>$1.355</td><td>$1.325</td><td class="chg down">−2.21%</td><td class="vcol">$298</td></tr>
+        <tr><td class="sym">SPYD</td><td>1</td><td>$48.48</td><td>$48.25</td><td class="chg down">−0.47%</td><td class="vcol">$48</td></tr>
       </tbody>
     </table>
-    <div class="tblcap">Value at pre-market marks. ZG shows no fresh pre-market print, so it reads flat to its close.</div>
-    <div class="disc">Figures are pre-market and informational only, not a recommendation to buy or sell. Pre-market pricing is thin and often revises at the open.</div>
+    <div class="tblcap">Value at the day's closing marks (1:00 PM PT close).</div>
+    <div class="disc">Figures are the day's closing marks and informational only, not a recommendation to buy or sell. Official settled closing prices are finalized shortly after the bell.</div>
   </div>
 
   <div class="band">
@@ -242,7 +242,7 @@ td.vcol { color:var(--ink); }
       <div class="todo"><span class="box"></span><span class="tlabel">Read Bible <span class="cad">daily · 7x</span></span></div>
       <div class="todo"><span class="box"></span><span class="tlabel">Education - Coursera UX/UI <span class="cad">5x this week</span></span></div>
       <div class="todo"><span class="box"></span><span class="tlabel">Training Runs <span class="cad">3x this week</span></span></div>
-      <div class="todo"><span class="box"></span><span class="tlabel">Listed to One Chapter - Steve Jobs Audible <span class="cad">daily · 7x</span></span></div>
+      <div class="todo"><span class="box"></span><span class="tlabel">Listened to One Chapter - Steve Jobs Audible <span class="cad">daily · 7x</span></span></div>
       <div class="todo"><span class="box"></span><span class="tlabel">J+K Pin Business</span></div>
       <div class="todo sub"><span class="box"></span><span class="tlabel">Finish manuf. spec sheets</span></div>
       <div class="todo sub"><span class="box"></span><span class="tlabel">3-5 pin MFR for quotes</span></div>
