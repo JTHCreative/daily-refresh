@@ -1,294 +1,224 @@
-<title>Morning Brief</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Morning Brief — Sep 15</title>
 <style>
-@font-face {
-  font-family:'Fraunces';
-  font-style:normal;
-  font-weight:600;
-  font-display:swap;
-  src:url(data:font/woff2;base64,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) format('woff2');
-}
+@font-face{font-family:"Fraunces";src:url(data:font/woff2;base64,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) format("woff2");font-weight:600;font-style:normal;font-display:swap;}
 :root{
   --bg:#FCFCFB; --ink:#2E2C27; --soft:#6B6A63; --grey:#B4B3A8;
-  --hair:#E4E3DC; --clay:#C6613F; --clay-h:#AE5133;
-  --up:#2F7D57; --down:#C0503A; --card:#F6F5F1;
+  --hair:#E4E3DC; --clay:#C6613F; --clayh:#AE5133; --card:#F4F3EF;
+  --up:#3F8A5B; --down:#B2503A;
 }
 :root[data-theme="dark"]{
-  --bg:#1A1917; --ink:#ECEAE3; --soft:#A9A79D; --grey:#6E6C64;
-  --hair:#33312C; --clay:#E08560; --clay-h:#C6613F;
-  --up:#5FB98C; --down:#E4856A; --card:#211F1C;
+  --bg:#1A1917; --ink:#ECE9E1; --soft:#A9A69C; --grey:#6E6B62;
+  --hair:#302E29; --clay:#D97A52; --clayh:#E68A62; --card:#232220;
+  --up:#6BBF88; --down:#E08768;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#1A1917; --ink:#ECEAE3; --soft:#A9A79D; --grey:#6E6C64;
-    --hair:#33312C; --clay:#E08560; --clay-h:#C6613F;
-    --up:#5FB98C; --down:#E4856A; --card:#211F1C;
+    --bg:#1A1917; --ink:#ECE9E1; --soft:#A9A69C; --grey:#6E6B62;
+    --hair:#302E29; --clay:#D97A52; --clayh:#E68A62; --card:#232220;
+    --up:#6BBF88; --down:#E08768;
   }
 }
 *{box-sizing:border-box;}
-html,body{background:var(--bg);}
-body{
-  margin:0; color:var(--ink);
-  font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased; line-height:1.5;
-}
-.wrap{max-width:860px; margin:0 auto; padding:34px 26px 60px;}
-.toggle{
-  position:fixed; top:14px; right:14px; z-index:10;
-  background:transparent; border:1px solid var(--hair); color:var(--soft);
-  border-radius:8px; padding:5px 9px; font:500 12px/1 -apple-system,"Segoe UI",sans-serif;
-  cursor:pointer;
-}
-.toggle:hover{color:var(--ink); border-color:var(--grey);}
-.daydate{color:var(--soft); font-size:13px; letter-spacing:.02em; margin:0 0 8px;}
-h1.head{
-  font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:normal;
-  font-size:40px; line-height:1.16; margin:0 0 22px; color:var(--ink);
-  letter-spacing:-.01em;
-}
-.terrain{width:100%; height:auto; display:block; margin:6px 0 4px;}
-.acts{display:flex; gap:0; margin:10px 0 6px;}
-.act{flex:1; padding:14px 18px; border-left:1px solid var(--hair);}
-.act:first-child{border-left:none; padding-left:2px;}
-.act .rng{font-weight:700; font-size:12.5px; letter-spacing:.03em; color:var(--ink); margin-bottom:5px;}
-.act .txt{font-size:13.5px; color:var(--soft);}
-.rule{border:none; border-top:1px solid var(--hair); margin:34px 0 0;}
-section{padding-top:26px;}
-h2{font-size:12.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--ink); margin:0 0 16px;}
-.calm{color:var(--soft); font-size:15px; margin:2px 0 4px;}
-.stock-note{color:var(--grey); font-size:12px; margin:-8px 0 16px;}
-.stables{display:flex; gap:30px; flex-wrap:wrap;}
-.stable{flex:1; min-width:250px;}
-.stable h3{font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--soft); margin:0 0 8px;}
-table.mkt{width:100%; border-collapse:collapse; font-size:13.5px;}
-table.mkt td{padding:7px 0; border-bottom:1px solid var(--hair);}
-.t-name{color:var(--ink);}
-.t-proxy{color:var(--grey); font-size:11.5px; margin-left:4px;}
-.t-num{text-align:right; color:var(--soft); font-variant-numeric:tabular-nums;}
-.t-chg{text-align:right; font-variant-numeric:tabular-nums; width:74px; font-weight:600;}
-.up{color:var(--up);} .down{color:var(--down);}
-.stock-read{font-size:13.5px; color:var(--soft); margin:18px 0 0; max-width:640px;}
-.pv{font-size:13.5px; color:var(--soft); margin:16px 0 2px;}
-.pv b{color:var(--ink); font-weight:600;}
-ul.jobs{list-style:none; margin:0; padding:0; column-count:2; column-gap:34px;}
-li.job{break-inside:avoid; margin:0 0 16px; padding:0;}
-li.job .num{display:block; color:var(--grey); font-size:11px; font-variant-numeric:tabular-nums; margin-bottom:2px;}
-a.job-title{color:var(--ink); font-weight:600; font-size:14px; text-decoration:none; line-height:1.32; display:block;}
-a.job-title:hover{color:var(--clay);}
-.job-sub{display:block; color:var(--soft); font-size:12.5px; margin-top:3px;}
-ul.todos{list-style:none; margin:0; padding:0;}
-li.todo{margin:0 0 12px;}
-.box{display:inline-block; width:15px; height:15px; border:1.6px solid var(--grey); border-radius:4px; vertical-align:-3px; margin-right:9px;}
-.box.sm{width:12px; height:12px; border-radius:3px; vertical-align:-2px; margin-right:8px;}
-.todo-t{font-size:14px; color:var(--ink);}
-.cad{color:var(--clay); font-size:11.5px; font-weight:600; margin-left:6px; letter-spacing:.02em;}
-ul.sub{list-style:none; margin:8px 0 0 25px; padding:0;}
-ul.sub li{margin:0 0 7px;}
-ul.sub .todo-t{font-size:13px; color:var(--soft);}
+html,body{margin:0;}
+body{background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;}
+.wrap{max-width:860px;margin:0 auto;padding:34px 26px 60px;}
+.topbar{display:flex;justify-content:flex-end;margin-bottom:6px;}
+.toggle{border:1px solid var(--hair);background:transparent;color:var(--soft);
+  font:inherit;font-size:12px;padding:5px 11px;border-radius:8px;cursor:pointer;line-height:1;}
+.toggle:hover{color:var(--ink);border-color:var(--grey);}
+.daydate{color:var(--soft);font-size:13px;letter-spacing:.02em;margin:2px 0 8px;}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:600;color:var(--ink);
+  font-size:40px;line-height:1.16;margin:0 0 22px;letter-spacing:-.01em;}
+.terrain{width:100%;height:auto;display:block;margin:4px 0 6px;}
+.acts{display:flex;gap:0;margin:10px 0 40px;}
+.act{flex:1;padding:0 20px;}
+.act:first-child{padding-left:0;}
+.act:last-child{padding-right:0;}
+.act+.act{border-left:1px solid var(--hair);}
+.atime{font-weight:600;font-size:12px;letter-spacing:.05em;color:var(--ink);margin-bottom:5px;}
+.asent{color:var(--soft);font-size:13.5px;}
+.calm{font-size:16px;color:var(--soft);padding:14px 0 6px;}
+.calm b{color:var(--ink);font-weight:600;}
+section{margin-top:40px;padding-top:26px;border-top:1px solid var(--hair);}
+h2{font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink);margin:0 0 16px;}
+.lede{color:var(--soft);font-size:13.5px;margin:0 0 16px;max-width:66ch;}
+/* stock */
+.idx{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.istat{flex:1;min-width:120px;background:var(--card);border:1px solid var(--hair);
+  border-radius:10px;padding:12px 14px;}
+.iname{font-size:12px;color:var(--soft);display:flex;justify-content:space-between;align-items:baseline;}
+.iproxy{color:var(--grey);font-size:10.5px;letter-spacing:.04em;}
+.iprice{font-size:20px;font-weight:600;color:var(--ink);margin:3px 0 1px;}
+.ichg{font-size:12.5px;font-weight:600;}
+.pf{color:var(--soft);font-size:13px;margin:0 0 14px;}
+.pf b{color:var(--ink);}
+table{border-collapse:collapse;width:100%;font-size:13px;}
+th{text-align:left;color:var(--grey);font-weight:600;font-size:11px;letter-spacing:.04em;
+  text-transform:uppercase;padding:0 10px 7px 0;border-bottom:1px solid var(--hair);}
+th.r,td.r{text-align:right;padding-right:0;}
+td{padding:8px 10px 8px 0;border-bottom:1px solid var(--hair);color:var(--soft);}
+td.sym{color:var(--ink);font-weight:600;}
+.up{color:var(--up);} .down{color:var(--down);} .flat{color:var(--grey);}
+.note{color:var(--grey);font-size:11.5px;margin-top:12px;}
+/* jobs */
+.jobs{columns:2;column-gap:34px;}
+.job{break-inside:avoid;margin-bottom:16px;}
+.jtitle{color:var(--ink);font-weight:600;font-size:14px;text-decoration:none;
+  border-bottom:1px solid var(--grey);line-height:1.3;display:inline-block;}
+.jtitle:hover{color:var(--clay);border-color:var(--clay);}
+.jmeta{color:var(--soft);font-size:12.5px;margin-top:3px;}
+.jnum{color:var(--grey);margin-right:5px;}
+.sal{color:var(--ink);font-weight:600;}
+/* goals */
+.goal{display:flex;align-items:baseline;gap:10px;padding:5px 0;}
+.goal.sub{padding-left:30px;padding-top:3px;padding-bottom:3px;}
+.box{flex:none;width:15px;height:15px;border:1.5px solid var(--grey);border-radius:4px;
+  position:relative;top:2px;}
+.goal.sub .box{width:13px;height:13px;border-radius:3px;}
+.gt{color:var(--ink);font-size:14px;}
+.goal.sub .gt{color:var(--soft);font-size:13px;}
+.cad{color:var(--clay);font-size:11.5px;font-weight:600;letter-spacing:.02em;
+  border:1px solid var(--hair);border-radius:20px;padding:1px 9px;position:relative;top:-1px;}
 @media (max-width:640px){
-  .wrap{padding:30px 18px 50px;}
-  h1.head{font-size:30px;}
-  .acts{flex-direction:column;}
-  .act{border-left:none; border-top:1px solid var(--hair); padding:12px 2px;}
-  .act:first-child{border-top:none;}
-  ul.jobs{column-count:1;}
-  .stables{gap:8px;}
+  .wrap{padding:24px 18px 48px;}
+  h1{font-size:30px;}
+  .acts{flex-direction:column;gap:0;}
+  .act{padding:14px 0;}
+  .act:first-child{padding-top:4px;}
+  .act+.act{border-left:none;border-top:1px solid var(--hair);}
+  .jobs{columns:1;}
 }
 </style>
-
-<button class="toggle" id="tg" aria-label="Toggle light or dark theme">◐ Theme</button>
+</head>
+<body>
 <div class="wrap">
+  <div class="topbar"><button class="toggle" id="tg" aria-label="Toggle color theme">◐ Theme</button></div>
 
-  <p class="daydate">Monday · September 14 2026</p>
-  <h1 class="head">The day is yours in Maui, Justin — nothing until dinner.</h1>
+  <div class="daydate">Tuesday · September 15 2026</div>
+  <h1>You're in Maui, Justin — the whole day is yours to spend slowly.</h1>
 
-  <svg class="terrain" viewBox="0 0 840 170" preserveAspectRatio="xMidYMid meet" role="img" aria-label="A calm, near-flat horizon with a dawn sun and two birds — an open day.">
-    <!-- birds: room to breathe -->
-    <path d="M 556 58 q 9 -8 18 0 q 9 -8 18 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M 600 44 q 7 -6 14 0 q 7 -6 14 0" fill="none" stroke="var(--soft)" stroke-width="1.4" stroke-linecap="round"/>
-    <!-- dawn sun (clay accent), half-risen on the horizon over the morning -->
-    <path d="M 96 120 A 26 26 0 0 1 148 120 Z" fill="none" stroke="var(--clay)" stroke-width="2.4"/>
-    <g stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round">
-      <line x1="122" y1="78" x2="122" y2="88"/>
-      <line x1="92" y1="90" x2="98" y2="97"/>
-      <line x1="152" y1="90" x2="146" y2="97"/>
-      <line x1="72" y1="112" x2="80" y2="114"/>
-      <line x1="172" y1="112" x2="164" y2="114"/>
+  <svg class="terrain" viewBox="0 0 840 170" preserveAspectRatio="xMidYMid meet" role="img" aria-label="A calm, open day drawn as still water with a low sun and one afternoon marker.">
+    <!-- sun: open, restful time -->
+    <g stroke="var(--clay)" stroke-width="2.2" fill="none" stroke-linecap="round">
+      <circle cx="150" cy="52" r="15"/>
+      <line x1="150" y1="22" x2="150" y2="12"/>
+      <line x1="150" y1="92" x2="150" y2="82"/>
+      <line x1="120" y1="52" x2="110" y2="52"/>
+      <line x1="180" y1="52" x2="190" y2="52"/>
+      <line x1="128" y1="30" x2="121" y2="23"/>
+      <line x1="172" y1="30" x2="179" y2="23"/>
+      <line x1="128" y1="74" x2="121" y2="81"/>
+      <line x1="172" y1="74" x2="179" y2="81"/>
     </g>
-    <!-- still-water terrain, one unbroken stroke -->
-    <path d="M 0 120 C 100 117 170 122 240 120 S 400 117 480 120 S 640 122 720 119 S 810 120 840 120"
-          fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/>
-    <!-- evening dinner, one meeting dot over the evening column -->
-    <circle cx="705" cy="119" r="7" fill="var(--ink)"/>
+    <!-- one unbroken calm terrain stroke, edge to edge -->
+    <path d="M0,124 C110,119 190,127 300,122 C410,117 500,126 600,120 C700,115 780,122 840,120"
+      fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- afternoon marker: TB Drop ~2pm -->
+    <circle cx="684" cy="118" r="8" fill="var(--ink)"/>
   </svg>
 
   <div class="acts">
     <div class="act">
-      <div class="rng">6 AM – 12 PM</div>
-      <div class="txt">Wide open — no meetings on the calendar. Coffee and the coast.</div>
+      <div class="atime">UNTIL 2 PM</div>
+      <div class="asent">The whole morning is open — nothing on the calendar, no calls to make.</div>
     </div>
     <div class="act">
-      <div class="rng">12 – 6 PM</div>
-      <div class="txt">Still nothing scheduled. Maui time, yours to spend.</div>
+      <div class="atime">2 – 3 PM</div>
+      <div class="asent">TB Drop is the single marker on the day, and it's a short one.</div>
     </div>
     <div class="act">
-      <div class="rng">6 PM ONWARD</div>
-      <div class="txt">Dinner at Mama's Fish House this evening — the one thing on the books.</div>
+      <div class="atime">3 PM ONWARD</div>
+      <div class="asent">Nothing after it — the evening stays a vacation evening.</div>
     </div>
   </div>
 
-  <hr class="rule">
-
-  <section>
-    <h2>Needs attention</h2>
-    <p class="calm">Nothing needs you this morning.</p>
-  </section>
-
-  <hr class="rule">
+  <div class="calm"><b>Nothing needs you this morning.</b> You're away in Maui through the 19th — the inbox and calendar are quiet.</div>
 
   <section>
     <h2>Stock market analysis</h2>
-    <p class="stock-note">Intraday, ~9:05 AM PT — mid-session, about 2½ hours after the 6:30 AM PT / 9:30 AM ET open. Every figure vs. Friday, Sept 11 official close.</p>
-    <div class="stables">
-      <div class="stable">
-        <h3>Major indexes · intraday (ETF proxies)</h3>
-        <table class="mkt">
-        <tr><td class="t-name">S&amp;P 500 <span class="t-proxy">SPY</span></td><td class="t-num">$761.30</td><td class="t-chg down">−0.39%</td></tr>
-        <tr><td class="t-name">Nasdaq-100 <span class="t-proxy">QQQ</span></td><td class="t-num">$709.02</td><td class="t-chg down">−0.82%</td></tr>
-        <tr><td class="t-name">Dow Jones <span class="t-proxy">DIA</span></td><td class="t-num">$525.08</td><td class="t-chg down">−0.14%</td></tr>
-        </table>
-      </div>
-      <div class="stable">
-        <h3>Your holdings · intraday</h3>
-        <table class="mkt">
-        <tr><td class="t-name">HOOD <span class="t-proxy">35 sh</span></td><td class="t-num">$114.49</td><td class="t-chg up">+1.71%</td></tr>
-        <tr><td class="t-name">AAPL <span class="t-proxy">4 sh</span></td><td class="t-num">$334.70</td><td class="t-chg up">+0.73%</td></tr>
-        <tr><td class="t-name">TTD <span class="t-proxy">42 sh</span></td><td class="t-num">$14.74</td><td class="t-chg up">+2.75%</td></tr>
-        <tr><td class="t-name">EVGO <span class="t-proxy">225 sh</span></td><td class="t-num">$1.42</td><td class="t-chg up">+4.41%</td></tr>
-        <tr><td class="t-name">ZG <span class="t-proxy">12.84 sh</span></td><td class="t-num">$33.99</td><td class="t-chg up">+2.27%</td></tr>
-        <tr><td class="t-name">SPYD <span class="t-proxy">1 sh</span></td><td class="t-num">$48.75</td><td class="t-chg up">+0.53%</td></tr>
-        </table>
-      </div>
-    </div>
-    <p class="pv">Account value <b>$8,962.18</b> right now — equities <b>$6,769.46</b>, crypto <b>$540.33</b>, cash <b>$1,652.39</b>. That’s about <b>$149</b> above Friday’s $8,813.55 close.</p>
-    <p class="stock-read">The pre-market red has largely drained out of the tape: the indexes are still lower, but only mildly — the Nasdaq-100 proxy is off −0.82%, the S&amp;P −0.39%, and the Dow barely −0.14%. Your book has gone the other way and turned green across the board. HOOD — roughly 59% of your equity — was −0.98% before the bell and is now +1.71%, a clean reversal, and it’s doing the heavy lifting: all six of your names are up. TTD (+2.75%), EVGO (+4.41%) and ZG (+2.27%) show the biggest percentage pops, though EVGO and ZG are small-dollar positions, so those moves are lighter in real dollars than they look. Net, your equities are worth about $143 more than Friday’s close while the broad market drifts slightly lower — one of those mornings where being concentrated in HOOD works for you rather than against you.</p>
-  </section>
+    <p class="lede">Pre-market, 6:1x AM PT — ahead of the 6:30 AM PT open. Prices below are the latest pre-market (non-regular) trades, each measured against Monday, Sept 14's official close.</p>
+    <div class="idx">
+      <div class="istat"><div class="iname">S&amp;P 500<span class="iproxy">SPY</span></div><div class="iprice">760.50</div><div class="ichg down">−0.05%</div></div>
+<div class="istat"><div class="iname">Nasdaq-100<span class="iproxy">QQQ</span></div><div class="iprice">708.91</div><div class="ichg down">−0.04%</div></div>
+<div class="istat"><div class="iname">Dow<span class="iproxy">DIA</span></div><div class="iprice">523.65</div><div class="ichg down">−0.16%</div></div>
 
-  <hr class="rule">
+    </div>
+    <p class="pf">Portfolio value <b>$8,854</b> — equity <b>$6,672</b>, crypto <b>$530</b>, cash <b>$1,652</b> (individual margin account). Pre-market the book is a touch softer, led lower by HOOD, your largest position.</p>
+    <table>
+      <thead><tr><th>Holding</th><th class="r">Shares</th><th class="r">Pre-market</th><th class="r">vs close</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">HOOD</td><td class="r">35</td><td class="r">$111.90</td><td class="r down">−2.13%</td></tr>
+<tr><td class="sym">AAPL</td><td class="r">4</td><td class="r">$331.41</td><td class="r down">−0.50%</td></tr>
+<tr><td class="sym">TTD</td><td class="r">42</td><td class="r">$14.80</td><td class="r down">−1.14%</td></tr>
+<tr><td class="sym">EVGO</td><td class="r">225</td><td class="r">$1.44</td><td class="r down">−0.69%</td></tr>
+<tr><td class="sym">ZG</td><td class="r">12.84</td><td class="r">$33.82</td><td class="r flat">−0.03%</td></tr>
+<tr><td class="sym">SPYD</td><td class="r">1</td><td class="r">$48.60</td><td class="r down">−0.06%</td></tr>
+
+      </tbody>
+    </table>
+    <p class="note">Indices use SPY / QQQ / DIA as stand-ins for the S&amp;P 500, Nasdaq-100 and Dow. ZG and SPYD show little to no pre-market trade, so their moves are effectively flat.</p>
+  </section>
 
   <section>
     <h2>UI/UX job opportunities</h2>
-    <ul class="jobs">
-      <li class="job">
-        <span class="num">01</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1582226-remote-united-states-principal-product-designer" target="_blank" rel="noopener">Principal Product Designer — Reddit</a>
-        <span class="job-sub">Salary “$223,600 - $313,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">02</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1572226-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Reddit</a>
-        <span class="job-sub">Salary “$194,600 - $272,400” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">03</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1584326-remote-united-states-senior-principal-designer" target="_blank" rel="noopener">Senior Principal Designer — Autodesk</a>
-        <span class="job-sub">Salary “$155,000 - $278,300” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">04</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1590626-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Gray Swan AI</a>
-        <span class="job-sub">Salary “$205,000 - $255,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">05</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1571226-remote-united-states-senior-product-designer" target="_blank" rel="noopener">Senior Product Designer — AssemblyAI</a>
-        <span class="job-sub">Salary “$180,000 - $240,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">06</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1591326-remote-united-states-senior-ai-product-designer" target="_blank" rel="noopener">Senior AI Product Designer — Onebrief</a>
-        <span class="job-sub">Salary “$160,000 - $230,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">07</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1582426-remote-united-states-senior-product-designer" target="_blank" rel="noopener">Senior Product Designer — Red Cell Partners</a>
-        <span class="job-sub">Salary “$180,000 - $215,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">08</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1601626-remote-united-states-principal-ux-designer" target="_blank" rel="noopener">Principal UX Designer — Grove Collaborative</a>
-        <span class="job-sub">Salary “$180,000 - $210,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">09</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1571926-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Parachute Health</a>
-        <span class="job-sub">Salary “$155,000 - $210,000” · uiuxjobsboard.com</span>
-      </li>
-      <li class="job">
-        <span class="num">10</span>
-        <a class="job-title" href="https://uiuxjobsboard.com/job/1597526-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Facet</a>
-        <span class="job-sub">Salary “$175,000 - $200,000” · uiuxjobsboard.com</span>
-      </li>
-    </ul>
-  </section>
+    <p class="lede">Fully-remote (US) UI/UX &amp; product design roles with a published range reaching $180K+, verified on each listing.</p>
+    <div class="jobs">
+      <div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1582226-remote-united-states-principal-product-designer" target="_blank" rel="noopener">Principal Product Designer — Reddit</a><div class="jmeta"><span class="jnum">01</span> Range listed at <span class="sal">$223,600 - $313,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1572226-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Reddit</a><div class="jmeta"><span class="jnum">02</span> Range listed at <span class="sal">$194,600 - $272,400</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1584326-remote-united-states-senior-principal-designer" target="_blank" rel="noopener">Senior Principal Designer — Autodesk</a><div class="jmeta"><span class="jnum">03</span> Range listed at <span class="sal">$155,000 - $278,300</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1590626-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Gray Swan AI</a><div class="jmeta"><span class="jnum">04</span> Range listed at <span class="sal">$205,000 - $255,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1594326-remote-united-states-principal-product-designer" target="_blank" rel="noopener">Principal Product Designer — Workiva</a><div class="jmeta"><span class="jnum">05</span> Range listed at <span class="sal">$177,000 - $284,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1580326-remote-united-states-product-designer" target="_blank" rel="noopener">Product Designer — Euclid</a><div class="jmeta"><span class="jnum">06</span> Range listed at <span class="sal">$185,000 - $230,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1571226-remote-united-states-senior-product-designer" target="_blank" rel="noopener">Senior Product Designer — AssemblyAI</a><div class="jmeta"><span class="jnum">07</span> Range listed at <span class="sal">$180,000 - $240,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1591326-remote-united-states-senior-ai-product-designer" target="_blank" rel="noopener">Senior AI Product Designer — Onebrief</a><div class="jmeta"><span class="jnum">08</span> Range listed at <span class="sal">$160,000 - $230,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1601626-remote-united-states-principal-ux-designer" target="_blank" rel="noopener">Principal UX Designer — Grove Collaborative</a><div class="jmeta"><span class="jnum">09</span> Range listed at <span class="sal">$180,000 - $210,000</span>, via uiuxjobsboard.com.</div></div>
+<div class="job"><a class="jtitle" href="https://uiuxjobsboard.com/job/1597526-remote-united-states-staff-product-designer" target="_blank" rel="noopener">Staff Product Designer — Facet</a><div class="jmeta"><span class="jnum">10</span> Range listed at <span class="sal">$175,000 - $200,000</span>, via uiuxjobsboard.com.</div></div>
 
-  <hr class="rule">
+    </div>
+  </section>
 
   <section>
     <h2>This week's goals</h2>
-    <ul class="todos">
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Read Bible <span class="cad">daily · 7x</span></span>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Education - Coursera UX/UI <span class="cad">5x this week</span></span>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Training Runs <span class="cad">3x this week</span></span>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Listed to One Chapter - Steve Jobs Audible <span class="cad">daily · 7x</span></span>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">J+K Pin Business</span>
-        <ul class="sub">
-          <li><span class="box sm"></span><span class="todo-t">Finish manuf. spec sheets</span></li>
-          <li><span class="box sm"></span><span class="todo-t">3-5 pin MFR for quotes</span></li>
-          <li><span class="box sm"></span><span class="todo-t">File fictitious business name</span></li>
-          <li><span class="box sm"></span><span class="todo-t">Business Reg certificate</span></li>
-        </ul>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Work</span>
-        <ul class="sub">
-          <li><span class="box sm"></span><span class="todo-t">Move Meeting 9/2</span></li>
-          <li><span class="box sm"></span><span class="todo-t">Preset Panels</span></li>
-          <li><span class="box sm"></span><span class="todo-t">Finish MLB panels</span></li>
-          <li><span class="box sm"></span><span class="todo-t">Finish interview assessment</span></li>
-        </ul>
-      </li>
-      <li class="todo">
-        <span class="box"></span><span class="todo-t">Check washer repair - Copper View</span>
-        <ul class="sub">
-          <li><span class="box sm"></span><span class="todo-t">Schedule with Nolan</span></li>
-          <li><span class="box sm"></span><span class="todo-t">Schedule tech</span></li>
-        </ul>
-      </li>
-    </ul>
+    <p class="lede">From your tracker — the week of Sunday, Sept 13. Recurring habits plus anything dated to this week.</p>
+    <div class="goals">
+      <div class="goal"><span class="box"></span><span class="gt">Read Bible</span><span class="cad">daily · 7x</span></div>
+<div class="goal"><span class="box"></span><span class="gt">Education – Coursera UX/UI</span><span class="cad">5x this week</span></div>
+<div class="goal"><span class="box"></span><span class="gt">Training Runs</span><span class="cad">3x this week</span></div>
+<div class="goal"><span class="box"></span><span class="gt">Listened to One Chapter – Steve Jobs Audible</span><span class="cad">daily · 7x</span></div>
+<div class="goal"><span class="box"></span><span class="gt">J+K Pin Business</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Finish manuf. spec sheets</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">3–5 pin MFR for quotes</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">File fictitious business name</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Business Reg certificate</span></div>
+<div class="goal"><span class="box"></span><span class="gt">Work</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Move Meeting 9/2</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Preset Panels</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Finish MLB panels</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Finish interview assessment</span></div>
+<div class="goal"><span class="box"></span><span class="gt">Check washer repair – Copper View</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Schedule with Nolan</span></div>
+<div class="goal sub"><span class="box"></span><span class="gt">Schedule tech</span></div>
+
+    </div>
   </section>
-
 </div>
-
 <script>
 (function(){
-  var root=document.documentElement, btn=document.getElementById('tg');
-  function cur(){
-    var t=root.getAttribute('data-theme');
-    if(t) return t;
-    return window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
-  }
-  btn.addEventListener('click',function(){
-    var next=cur()==='dark'?'light':'dark';
-    root.setAttribute('data-theme',next);
+  var b=document.getElementById('tg'), r=document.documentElement;
+  b.addEventListener('click',function(){
+    var cur=r.getAttribute('data-theme');
+    if(!cur){ cur = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark':'light'; }
+    r.setAttribute('data-theme', cur==='dark' ? 'light':'dark');
   });
 })();
 </script>
+</body>
+</html>
